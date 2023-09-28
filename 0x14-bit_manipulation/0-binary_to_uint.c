@@ -20,9 +20,12 @@ unsigned int binary_to_uint(const char *b)
 		if (b[i] < '0' || b[i] > '1')
 			return (0);
 
+		/*
+		 * Convert the binary string to decimal by multiplying the
+		 * current value by 2 and adding the current binary digit.
+		 */
 		dec_val = 2 * dec_val + (b[i] - '0');
 	}
 
 	return (dec_val);
 }
-

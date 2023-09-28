@@ -16,13 +16,14 @@ unsigned int flip_bits(unsigned long int n, unsigned long int m)
 	for (i = 63; i >= 0; i--)
 	{
 		/*
-		 * Right-shift the value by 'i' positions and check the least
-		 * significant bit to determine if 1.
+		 * Right-shift the 'exclusive' value by 'i'  check the least
+		 * significant bit to determine if it's 1.
 		 */
 		current = exclusive >> i;
 		if (current & 1)
-			count++; /* Increases the count each differing bit. */
+			count++; /* Increase the count . */
 	}
 
 	return (count);
 }
+

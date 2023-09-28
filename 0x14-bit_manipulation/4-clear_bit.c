@@ -13,7 +13,7 @@ int clear_bit(unsigned long int *n, unsigned int index)
 	if (index > 63)
 		return (-1);
 
-	/* operation with a complemented bit mask to clear the bit. */
+	/* a complemented bit mask to clear the bit. */
 	*n = (~(1UL << index) & *n);
 
 	return (1); /* Return 1 to indicate success. */
